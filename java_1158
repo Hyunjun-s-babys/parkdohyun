@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+
+        float N = sc.nextFloat();
+        
+        if(N>=60 && N<=70){
+            System.out.println("win");
+
+        }
+        else if(N>=30 && N<=40){
+            System.out.println("win");
+        }
+        else{
+            System.out.println("lose");
+        }
+    }
+}
