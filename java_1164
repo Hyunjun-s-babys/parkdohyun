@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        int N1 = sc.nextInt();
+        int N2 = sc.nextInt();
+        int N3 = sc.nextInt();
+        
+        if(N1<=170){
+            System.out.println("CRASH");
+        }
+        else if(N2<=170){
+            System.out.println("CRASH");
+        }
+        else if(N3<=170){
+            System.out.println("CRASH");
+        }
+        else{
+            System.out.println("PASS");
+        }
+    }
+
+
+}
