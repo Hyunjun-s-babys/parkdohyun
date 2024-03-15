@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        int time = sc.nextInt();
+        int score = sc.nextInt();
+       
+        score = 1 + score +(int)(89-time)/5;
+
+
+        System.out.println(score);
+    }
+
+
+}
