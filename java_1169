@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        int year= sc.nextInt();
+        int y = sc.nextInt();
+        
+        year = (int)(year/(10000));
+
+        int age = (y==1 | y==2 ? year+1900 : year+2000);
+
+        System.out.println(2012-age+1);
+
+
+    }
+
+
+}
+
