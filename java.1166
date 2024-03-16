@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+
+        int Y = (n%400==0?1:n%4==0&&n%100!=0?1:0);
+
+        if(Y==1){
+            System.out.println("Leap");
+        }
+        else{
+            System.out.println("Normal");
+        }
+
+        
+    }
+
+
+}
