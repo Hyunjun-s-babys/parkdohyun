@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        
+        double plus = a+b;
+        double sub = (a-b>b-a?a-b:b-a);
+        double mul = a*b;
+        double div = (a/b>b/a?a/b:b/a);
+        double sq = (Math.pow(a,b)>Math.pow(b,a)?(Math.pow(a,b)):Math.pow(b,a));
+
+        double max = plus;
+
+        max = (max>sub?max:sub);
+        max = (max>mul?max:mul);
+        max = (max>div?max:div);
+        max = (max>sq?max:sq);
+
+        System.out.printf("%.6f",max);  
+    } 
+}
+
