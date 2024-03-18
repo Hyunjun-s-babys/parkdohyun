@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+       
+        int nad = sc.nextInt();
+        int ad = sc.nextInt();
+        int cost = sc.nextInt();
+
+        if(ad-cost>nad){
+            System.out.println("advertise");
+        }
+        else if(ad-cost==nad){
+            System.out.println("does not matter");
+        }
+        else{
+            System.out.println("do not advertise");
+        }
+        
+    } 
+}
+
+
+
