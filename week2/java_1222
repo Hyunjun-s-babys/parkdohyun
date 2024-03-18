@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+       
+        int time = sc.nextInt();
+        int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
+
+        int score = (89-time)/5+1;
+
+        if(n1+score>n2){
+            System.out.println("win");
+        }
+        else if(n1+score==n2){
+            System.out.println("same");
+        }
+        else{
+            System.out.println("lose");
+        }
+    } 
+}
+
+
+
