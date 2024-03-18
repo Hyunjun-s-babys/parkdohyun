@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+       
+        int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
+        int n3 = sc.nextInt();
+        int n4 = sc.nextInt();
+        int n5 = sc.nextInt();
+        int n6 = sc.nextInt();
+        int b1 = sc.nextInt();
+
+        int n11 = sc.nextInt();
+        int n22 = sc.nextInt();
+        int n33 = sc.nextInt();
+        int n44 = sc.nextInt();
+        int n55 = sc.nextInt();
+        int n66 = sc.nextInt();
+
+        int q1 = (n1==n11|n1==n22|n1==n33|n1==n44|n1==n55|n1==n66?1:0);
+        int q2 = (n2==n11|n2==n22|n2==n33|n2==n44|n2==n55|n2==n66?1:0);
+        int q3 = (n3==n11|n3==n22|n3==n33|n3==n44|n3==n55|n3==n66?1:0);
+        int q4 = (n4==n11|n4==n22|n4==n33|n4==n44|n4==n55|n4==n66?1:0);
+        int q5 = (n5==n11|n5==n22|n5==n33|n5==n44|n5==n55|n5==n66?1:0);
+        int q6 = (n6==n11|n6==n22|n6==n33|n6==n44|n6==n55|n6==n66?1:0);
+
+        int sum = q1+q2+q3+q4+q5+q6;
+
+        if(sum==6){
+            System.out.println(1);
+        }
+        else if(sum==5){
+            if(b1==n11|b1==n22|b1==n33|b1==n44|b1==n55|b1==n66){
+                System.out.println(2);
+            }
+            else{
+                System.out.println(3);
+            }
+        }
+        else if(sum==4){
+            System.out.println(4);
+        }
+        else if(sum==3){
+            System.out.println(5);
+        }
+        else{
+            System.out.println(0);
+        }
+        }
+    } 
+
+
+
+
