@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+       
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int n = sc.nextInt();
+        
+        if(n==1){
+            System.out.println(a);
+        }
+        else{
+            double an = a*Math.pow(b,n-1);
+            double bn = 0;
+            
+            for(int i=0; i<n-1;i++){
+                bn = bn + Math.pow(b,i);
+                
+            }
+            System.out.println((int)(an+bn*c));
+        }
+        }
+    } 
