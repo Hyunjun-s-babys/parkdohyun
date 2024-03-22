@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+       
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        double money = a;
+        for(int i=0;i<b;i++){
+            int r = sc.nextInt();
+            money += money*(0.01*r);
+        }
+        int money2 = (int)Math.round(money);
+        System.out.println(money2-a);
+        if(money2>a){
+            System.out.print("good");
+        }
+        else if(money2==a){
+            System.out.print("same");
+        }
+        else{
+            System.out.print("bad");
+        }
+        }
+    } 
+
