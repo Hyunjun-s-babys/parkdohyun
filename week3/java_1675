@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+       
+        Scanner sc = new Scanner(System.in);
+
+        String input = sc.nextLine();
+
+        int[] ascii = new int[input.length()];
+
+        for(int i=0; i<input.length();i++){
+            
+            if(input.charAt(i)==97||input.charAt(i)==98||input.charAt(i)==99){
+                ascii[i] = input.charAt(i)+23;
+            }
+            else if(input.charAt(i)==32){
+                ascii[i] = input.charAt(i);
+            }
+            else{
+                ascii[i] = input.charAt(i)-3;
+            }
+        }
+        for(int word : ascii){
+            System.out.print((char)word);
+        }
+        }
+
+}
+
+
