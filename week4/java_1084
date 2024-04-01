@@ -1,24 +1,29 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class Main{
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
        
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        String[] s = br.readLine().split(" ");
 
-        int r = sc.nextInt();
-        int g = sc.nextInt();
-        int b = sc.nextInt();
-        int sum=0;
-        for(int i=0;i<r;i++){
-            for(int j=0;j<g;j++){
-                for(int k=0;k<b;k++){
-                    System.out.printf("%d %d %d\n",i,j,k);
-                    sum++;
+        int count = 0;
+        for(int i=0;i<Integer.valueOf(s[0]); i++) {
+            for(int j=0;j<Integer.valueOf(s[1]); j++) {
+                for(int k=0;k<Integer.valueOf(s[2]); k++) {
+                    bw.write(i+" "+j+" "+k+"\n");
+                    count++;
                 }
             }
         }
-        
-        System.out.println(sum);
+        bw.write(String.valueOf(count));
+        bw.flush();
+
         
     }
 }
+
