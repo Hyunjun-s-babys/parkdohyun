@@ -1,0 +1,41 @@
+// You may use import as below.
+import java.util.*;
+
+class Solution {
+    public int[] solution(String[] shirtSize) {
+        int[] answer = {};
+        answer = new int[6];
+        for(String element : shirtSize){
+            if(element.equals("XS")){
+                answer[0]++;
+            }
+            else if(element.equals("S")){
+                answer[1]++;
+            }
+            else if(element.equals("M")){
+                answer[2]++;
+            }
+            else if(element.equals("L")){
+                answer[3]++;
+            }
+            else if(element.equals("XL")){
+                answer[4]++;
+            }
+            else if(element.equals("XXL")){
+                answer[5]++;
+            }
+        }
+
+        return answer;
+    }
+    
+    // The following is main method to output testcase.
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        String[] shirtSize = {"XS", "S", "L", "L", "XL", "S"};
+        int[] ret = sol.solution(shirtSize);
+ 
+        // Press Run button to receive output.  
+        System.out.println("Solution: return value of the method is " + Arrays.toString(ret) + " .");
+    }
+}
